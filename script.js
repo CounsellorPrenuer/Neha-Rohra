@@ -467,8 +467,7 @@ async function fetchSanityContent() {
     "settings": *[_type == "siteSettings"][0],
     "home": *[_type == "homePage"][0],
     "founder": *[_type == "founder"][0],
-    "services": *[_type == "service"] | order(order asc),
-    "testimonials": *[_type == "testimonial"] | order(order asc)
+    "services": *[_type == "service"] | order(order asc)
   }`;
 
   const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`;
@@ -484,8 +483,7 @@ async function fetchSanityContent() {
         settings: json.result.settings || fallbackData.settings,
         home: json.result.home || fallbackData.home,
         founder: json.result.founder || fallbackData.founder,
-        services: (json.result.services && json.result.services.length > 0) ? json.result.services : fallbackData.services,
-        testimonials: (json.result.testimonials && json.result.testimonials.length > 0) ? json.result.testimonials : fallbackData.testimonials
+        services: (json.result.services && json.result.services.length > 0) ? json.result.services : fallbackData.services
       };
       updateDOM(merged);
     }
