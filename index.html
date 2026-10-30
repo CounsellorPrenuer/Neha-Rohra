@@ -59,10 +59,7 @@
   <section id="home" class="hero">
     <div class="container hero-wrapper">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="sanity-status-dot"></span>
-          <span>Career Guidance & Mentorship</span>
-        </div>
+        <div class="section-tag">Career Guidance &amp; Mentorship</div>
         <h1 class="hero-heading" id="heroHeading">Find Your True North in Education & Career</h1>
         <p class="hero-description" id="heroDescription">
           At Career Compass, we empower students, parents, and working professionals with deep industry insights, scientific assessments, and empathetic mentorship to discover their ideal career paths.
@@ -97,15 +94,15 @@
         </div>
         <div class="value-props-list" id="valuePropsList">
           <div class="value-prop-card">
-            <h5><span>✦</span> 15+ Years Industry Experience</h5>
+            <h5>✦ 15+ Years Industry Experience</h5>
             <p>12+ years in corporate HR & talent acquisition bridging what candidates bring with what roles truly need.</p>
           </div>
           <div class="value-prop-card">
-            <h5><span>✦</span> Scientific Assessments</h5>
+            <h5>✦ Scientific Assessments</h5>
             <p>Psychometric evaluations measuring interests, personality, and abilities for data-backed career decisions.</p>
           </div>
           <div class="value-prop-card">
-            <h5><span>✦</span> End-to-End Advisory</h5>
+            <h5>✦ End-to-End Advisory</h5>
             <p>From school stream selection and college admission planning to CV building and corporate career growth.</p>
           </div>
         </div>
@@ -116,7 +113,7 @@
   <!-- 2. About Founder Section -->
   <section id="about" class="founder-section">
     <div class="container founder-wrapper">
-      <div class="founder-image-col">
+      <div class="founder-image-col" style="position: relative;">
         <div class="founder-image-frame">
           <img src="images/founder.jpeg" alt="Neha Rohra - Founder" id="founderPhoto">
         </div>
@@ -174,7 +171,6 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
       </div>
 
       <div class="services-grid" id="servicesGrid">
-        <!-- Rendered dynamically from Sanity or fallback -->
         <div class="service-card">
           <div class="service-icon">🧭</div>
           <h3 class="service-title">Career Guidance & Counselling</h3>
@@ -223,30 +219,37 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
         <p class="section-subtitle">Scientifically validated career guidance programs powered by Mentoria's 4-step holistic ecosystem for students, graduates, and professionals.</p>
       </div>
 
-      <!-- Main Category Tabs -->
-      <div class="package-main-tabs">
-        <button class="main-tab-btn active" id="plansTabBtn" onclick="switchMainTab('plans')">Mentoria's Plans</button>
-        <button class="main-tab-btn" id="customTabBtn" onclick="switchMainTab('custom')">Customise Your Mentorship Plan</button>
+      <!-- Segmented Main Head: Mentoria's Plans vs Customise Your Mentorship Plan -->
+      <div class="segmented-head">
+        <button id="plansBtn" class="active" onclick="switchMainTab('plans')">Mentoria's Plans</button>
+        <button id="customBtn" onclick="switchMainTab('custom')">Customise Your Mentorship Plan</button>
       </div>
 
-      <!-- Plans Sub-Tabs for Audience Groups -->
-      <div id="plansSubTabsWrap">
+      <!-- Mentoria's Plans Wrapper -->
+      <div id="plansWrap">
+        <!-- Audience Tabs -->
         <div class="audience-tabs" id="audienceTabs">
-          <button class="audience-tab active" onclick="switchAudience('8-9 STUDENTS')">8-9 STUDENTS</button>
-          <button class="audience-tab" onclick="switchAudience('10-12 STUDENTS')">10-12 STUDENTS</button>
-          <button class="audience-tab" onclick="switchAudience('COLLEGE GRADUATES')">COLLEGE GRADUATES</button>
-          <button class="audience-tab" onclick="switchAudience('WORKING PROFESSIONALS')">WORKING PROFESSIONALS</button>
+          <button class="tab active" onclick="switchAudience('8-9 STUDENTS')">8-9 STUDENTS</button>
+          <button class="tab" onclick="switchAudience('10-12 STUDENTS')">10-12 STUDENTS</button>
+          <button class="tab" onclick="switchAudience('COLLEGE GRADUATES')">COLLEGE GRADUATES</button>
+          <button class="tab" onclick="switchAudience('WORKING PROFESSIONALS')">WORKING PROFESSIONALS</button>
         </div>
 
-        <!-- Mentoria Cards Grid (Standard vs Premium) -->
-        <div class="packages-grid" id="packagesGrid">
-          <!-- Populated dynamically via JS -->
+        <!-- Graphic Stage Area -->
+        <div class="mentoria-stage">
+          <div class="stage-yellow-circle"></div>
+          <div class="stage-pink-arc"></div>
+          <div class="plan-grid" id="planGrid">
+            <!-- Populated dynamically via JS -->
+          </div>
         </div>
       </div>
 
-      <!-- Custom Plans Modules (Mentoria5 & Mentoria6) -->
-      <div class="custom-plans-container" id="customPlansContainer">
-        <div class="custom-plans-grid" id="customPlansGrid">
+      <!-- Customise Your Mentorship Plan Section (12 Clean Cards) -->
+      <div id="custom-services" class="custom-services" style="display: none;">
+        <h3>Want To Customise Your Mentorship Plan?</h3>
+        <p class="custom-desc">If you want to subscribe to specific services from Mentoria that resolve your career challenges, you can choose one or more of the following:</p>
+        <div class="custom-grid" id="customGrid">
           <!-- Populated dynamically via JS -->
         </div>
       </div>
@@ -263,7 +266,6 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
       </div>
 
       <div class="testimonials-grid" id="testimonialsGrid">
-        <!-- Rendered dynamically -->
         <div class="testimonial-card">
           <div class="quote-icon">“</div>
           <p class="testimonial-quote">Neha ma'am helped me gain clarity when I was completely confused about choosing between Engineering and Design. The psychometric report and counselling gave me clear direction.</p>
@@ -333,7 +335,7 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
               <div class="contact-item-icon">📍</div>
               <div class="contact-item-text">
                 <p>Office Location</p>
-                <p id="contactAddress">Mumbai, Maharashtra, India (Online Sessions Pan-India & Global)</p>
+                <p id="contactAddress">Mumbai, Maharashtra, India (Online Sessions Pan-India &amp; Global)</p>
               </div>
             </div>
           </div>

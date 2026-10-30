@@ -89,370 +89,311 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
       quote: 'Neha\'s corporate HR background from EY and Capgemini brings incredible practical value. Her interview prep and career roadmap guidance helped me transition into a senior role smoothly.'
     }
   ],
-  packages: [
+  plans: [
     // 8-9 Students
     {
-      name: 'Discover',
-      tier: 'STANDARD',
-      category: '8-9 STUDENTS',
-      price: '₹ 5,500',
-      duration: '1 Year',
-      sessions: '1 Session',
-      imagePath: 'images/Mentoria1.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests', isIncluded: true },
-        { text: '1 career counselling session with Mentoria\'s expert career coaches', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Invites to live webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with education pathways', isIncluded: false },
-        { text: 'Guidance on studying abroad', isIncluded: false },
-        { text: 'CV building during internships/graduation', isIncluded: false }
+      segment: '8-9 STUDENTS',
+      standardTitle: 'Discover',
+      standardPrice: '5,500',
+      standardFeatures: [
+        'Psychometric assessment to measure your interests',
+        '1 career counselling session with Mentoria\'s expert career coaches',
+        'Lifetime access to Knowledge Gateway',
+        'Invites to live webinars by industry experts'
       ],
-      order: 1,
-      featured: false
-    },
-    {
-      name: 'Discover plus+',
-      tier: 'PREMIUM',
-      category: '8-9 STUDENTS',
-      price: '₹ 15,000',
-      duration: 'Until Graduation',
-      sessions: '8 Sessions (1/year)',
-      imagePath: 'images/Mentoria1.png',
-      features: [
-        { text: 'Psychometric assessments to measure your interests, personality and abilities', isIncluded: true },
-        { text: '8 career counselling sessions (1 every year) with Mentoria\'s expert career coaches until graduation', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Invites to live webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with education pathways', isIncluded: true },
-        { text: 'Guidance on studying abroad', isIncluded: true },
-        { text: 'CV building during internships/graduation', isIncluded: true }
+      standardExcluded: [
+        'Customised reports after each session with education pathways',
+        'Guidance on studying abroad',
+        'CV building during internships/graduation'
       ],
-      order: 2,
-      featured: true
+      premiumTitle: 'Discover plus+',
+      premiumPrice: '15,000',
+      premiumFeatures: [
+        'Psychometric assessments to measure your interests, personality and abilities',
+        '8 career counselling sessions (1 every year) with Mentoria\'s expert career coaches until graduation',
+        'Lifetime access to Knowledge Gateway',
+        'Invites to live webinars by industry experts',
+        'Customised reports after each session with education pathways',
+        'Guidance on studying abroad',
+        'CV building during internships/graduation'
+      ]
     },
     // 10-12 Students
     {
-      name: 'Achieve Online',
-      tier: 'STANDARD',
-      category: '10-12 STUDENTS',
-      price: '₹ 5,999',
-      duration: '1 Year',
-      sessions: '1 Session',
-      imagePath: 'images/Mentoria2.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '1 career counselling session', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Pre-recorded webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with education pathways', isIncluded: false },
-        { text: 'Guidance on studying abroad', isIncluded: false },
-        { text: 'CV reviews during internships/graduation', isIncluded: false }
+      segment: '10-12 STUDENTS',
+      standardTitle: 'Achieve Online',
+      standardPrice: '5,999',
+      standardFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '1 career counselling session',
+        'Lifetime access to Knowledge Gateway',
+        'Pre-recorded webinars by industry experts'
       ],
-      order: 3,
-      featured: false
-    },
-    {
-      name: 'Achieve Plus+',
-      tier: 'PREMIUM',
-      category: '10-12 STUDENTS',
-      price: '₹ 10,599',
-      duration: 'Until Graduation',
-      sessions: '4 Sessions',
-      imagePath: 'images/Mentoria2.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '4 career counselling sessions', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Attend live webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with education pathways', isIncluded: true },
-        { text: 'Guidance on studying abroad', isIncluded: true },
-        { text: 'CV reviews during internships/graduation', isIncluded: true }
+      standardExcluded: [
+        'Customised reports after each session with education pathways',
+        'Guidance on studying abroad',
+        'CV reviews during internships/graduation'
       ],
-      order: 4,
-      featured: true
+      premiumTitle: 'Achieve Plus+',
+      premiumPrice: '10,599',
+      premiumFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '4 career counselling sessions',
+        'Lifetime access to Knowledge Gateway',
+        'Attend live webinars by industry experts',
+        'Customised reports after each session with education pathways',
+        'Guidance on studying abroad',
+        'CV reviews during internships/graduation'
+      ]
     },
     // College Graduates
     {
-      name: 'Ascend Online',
-      tier: 'STANDARD',
-      category: 'COLLEGE GRADUATES',
-      price: '₹ 6,499',
-      duration: '1 Year',
-      sessions: '1 Session',
-      imagePath: 'images/Mentoria3.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '1 career counselling session', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Pre-recorded webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with information on certificate/online courses', isIncluded: false },
-        { text: 'Guidance on studying abroad', isIncluded: false },
-        { text: 'CV reviews for job application', isIncluded: false }
+      segment: 'COLLEGE GRADUATES',
+      standardTitle: 'Ascend Online',
+      standardPrice: '6,499',
+      standardFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '1 career counselling session',
+        'Lifetime access to Knowledge Gateway',
+        'Pre-recorded webinars by industry experts'
       ],
-      order: 5,
-      featured: false
-    },
-    {
-      name: 'Ascend Plus+',
-      tier: 'PREMIUM',
-      category: 'COLLEGE GRADUATES',
-      price: '₹ 10,599',
-      duration: 'Until Job Placement',
-      sessions: '3 Sessions',
-      imagePath: 'images/Mentoria3.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '3 career counselling sessions', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Attend live webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with information on certificate/online courses', isIncluded: true },
-        { text: 'Guidance on studying abroad', isIncluded: true },
-        { text: 'CV reviews for job application', isIncluded: true }
+      standardExcluded: [
+        'Customised reports after each session with information on certificate/online courses',
+        'Guidance on studying abroad',
+        'CV reviews for job application'
       ],
-      order: 6,
-      featured: true
+      premiumTitle: 'Ascend Plus+',
+      premiumPrice: '10,599',
+      premiumFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '3 career counselling sessions',
+        'Lifetime access to Knowledge Gateway',
+        'Attend live webinars by industry experts',
+        'Customised reports after each session with information on certificate/online courses',
+        'Guidance on studying abroad',
+        'CV reviews for job application'
+      ]
     },
     // Working Professionals
     {
-      name: 'Ascend Online',
-      tier: 'STANDARD',
-      category: 'WORKING PROFESSIONALS',
-      price: '₹ 6,499',
-      duration: '1 Year',
-      sessions: '1 Session',
-      imagePath: 'images/Mentoria4.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '1 career counselling session', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Pre-recorded webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with information on certificate/online courses', isIncluded: false },
-        { text: 'Guidance on studying abroad', isIncluded: false },
-        { text: 'CV reviews for job application', isIncluded: false }
+      segment: 'WORKING PROFESSIONALS',
+      standardTitle: 'Ascend Online',
+      standardPrice: '6,499',
+      standardFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '1 career counselling session',
+        'Lifetime access to Knowledge Gateway',
+        'Pre-recorded webinars by industry experts'
       ],
-      order: 7,
-      featured: false
+      standardExcluded: [
+        'Customised reports after each session with information on certificate/online courses',
+        'Guidance on studying abroad',
+        'CV reviews for job application'
+      ],
+      premiumTitle: 'Ascend Plus+',
+      premiumPrice: '10,599',
+      premiumFeatures: [
+        'Psychometric assessment to measure your interests, personality and abilities',
+        '3 career counselling sessions',
+        'Lifetime access to Knowledge Gateway',
+        'Attend live webinars by industry experts',
+        'Customised reports after each session with information on certificate/online courses',
+        'Guidance on studying abroad',
+        'CV reviews for job application'
+      ]
+    }
+  ],
+  customPlans: [
+    {
+      title: 'CV Building',
+      price: '₹2000',
+      description: 'Is your CV making a great first impression on your behalf? Our HR experts will help you build the kind of CV that stands out from the crowd and increases your chances of getting interview calls.'
     },
     {
-      name: 'Ascend Plus+',
-      tier: 'PREMIUM',
-      category: 'WORKING PROFESSIONALS',
-      price: '₹ 10,599',
-      duration: 'Career Transition',
-      sessions: '3 Sessions',
-      imagePath: 'images/Mentoria4.png',
-      features: [
-        { text: 'Psychometric assessment to measure your interests, personality and abilities', isIncluded: true },
-        { text: '3 career counselling sessions', isIncluded: true },
-        { text: 'Lifetime access to Knowledge Gateway', isIncluded: true },
-        { text: 'Attend live webinars by industry experts', isIncluded: true },
-        { text: 'Customised reports after each session with information on certificate/online courses', isIncluded: true },
-        { text: 'Guidance on studying abroad', isIncluded: true },
-        { text: 'CV reviews for job application', isIncluded: true }
-      ],
-      order: 8,
-      featured: true
-    },
-    // Custom Modules
-    {
-      name: 'Custom Plans Part 1: Career & Admission Boosters',
-      tier: 'CUSTOM',
-      category: 'CUSTOMISABLE PLANS',
-      price: 'From ₹1,000',
-      duration: 'Flexible Modules',
-      sessions: 'Self-Paced / 1-on-1',
-      description: 'Modular add-on services including Career Report, Helpline Access, CAP-100, and Exam Stress Management.',
-      imagePath: 'images/Mentoria5.png',
-      features: [
-        { text: 'Career Report (₹1,500) - Detailed psychometric assessment report', isIncluded: true },
-        { text: 'Career Report + Career Counselling (₹3,000) - Report + 1:1 expert consultation', isIncluded: true },
-        { text: 'Knowledge Gateway + Helpline Access (₹1,100) - Lifetime portal & query support', isIncluded: true },
-        { text: '1-to-1 Session with a Career Expert (₹3,500) - 1-hour deep-dive session', isIncluded: true },
-        { text: 'College Admission Planning (₹3,000) - Resourceful planner for India & Abroad', isIncluded: true },
-        { text: 'Exam Stress Management (₹1,000) - Mindset, revision schedule & stress tools', isIncluded: true },
-        { text: 'College Admissions Planner - 100 (₹1,199) - Top 100 colleges ranked in 4 tiers', isIncluded: true }
-      ],
-      order: 9,
-      featured: false
+      title: 'LinkedIn Profile Building',
+      price: '₹2000',
+      description: 'Revamp your LinkedIn profile with recommendations from recruitment experts to showcase your career journey and increase your chances of interview calls.'
     },
     {
-      name: 'Custom Plans Part 2: Placement & Profile Building',
-      tier: 'CUSTOM',
-      category: 'CUSTOMISABLE PLANS',
-      price: 'From ₹2,000',
-      duration: 'Flexible Modules',
-      sessions: '1-on-1 Mentorship',
-      description: 'Modular professional services including CV Building, LinkedIn Optimization, Interview Prep, and Study Abroad SOP guidance.',
-      imagePath: 'images/Mentoria6.png',
-      features: [
-        { text: 'CV Building (₹2,000) - Crafted by senior HR & recruitment experts', isIncluded: true },
-        { text: 'LinkedIn Profile Building (₹2,000) - Professional profile revamp for recruiter reach', isIncluded: true },
-        { text: 'LinkedIn Profile + CV Building (₹3,500) - Complete professional branding package', isIncluded: true },
-        { text: 'Job Application Strategy (₹4,000) - Target list, tracker & outreach blueprint', isIncluded: true },
-        { text: 'Overseas Admission: SOP Brainstorm (₹3,000) - 1-hour structure & narrative session', isIncluded: true },
-        { text: 'Overseas Admission: SOP Review (₹2,500) - Expert critique & polish for shortlist cut', isIncluded: true },
-        { text: 'Interview Prep Session (₹2,000) - Mock interview & feedback from top HR leaders', isIncluded: true }
-      ],
-      order: 10,
-      featured: true
+      title: 'LinkedIn Profile + CV Building',
+      price: '₹3500',
+      description: 'Build the kind of profile recruiters would love to spend time on. Get your CV and LinkedIn profile built by our HR/Recruitment experts.'
+    },
+    {
+      title: 'Job Application Strategy',
+      price: '₹4000',
+      description: 'Build the right pipeline for job interviews through a customised job application tracker with information on companies, job postings and steps you need to follow to land your dream job.'
+    },
+    {
+      title: 'Career Report',
+      price: '₹2500',
+      description: 'Get a detailed report of your psychometric assessment for a scientific analysis of your interests, personality and abilities. Find out where your interests lie and which future paths you can potentially consider.'
+    },
+    {
+      title: 'Career Report + Career Counselling',
+      price: '₹4000',
+      description: 'Connect with India\'s top career coaches to analyse your psychometric report, get a detailed action plan for your development areas and shortlist the top three career paths you\'re most likely to enjoy and excel at.'
+    },
+    {
+      title: 'Knowledge Gateway + Career Helpline Access',
+      price: '₹250/month',
+      description: 'Unlock holistic information on your career paths and get direct access to Mentoria\'s experts, who will resolve your career-related queries through our dedicated Career Helpline. Validate your career decisions from now until you land a job you love.'
+    },
+    {
+      title: 'One-to-One Session with a Career Expert',
+      price: '₹3500 per interaction for 1 hour',
+      description: 'Resolve your career queries and glimpse into your future world through a one-on-one session with an expert from your chosen field.'
+    },
+    {
+      title: 'Overseas Admission Planner',
+      price: '₹3000 for top 10 colleges',
+      description: 'Planning your masters studies? Get unbiased recommendations and details on your future college options in India and abroad, organised in one resourceful planner.'
+    },
+    {
+      title: 'Overseas Admission: SOP Brainstorm',
+      price: '₹3000 for a 1-hour session',
+      description: 'Increase your chances of getting admissions in your dream college by structuring your SOP in the most ideal manner through discussions with an overseas admissions expert.'
+    },
+    {
+      title: 'Overseas Admission: SOP Review',
+      price: '₹2500',
+      description: 'Is your SOP/Essay good enough to get you shortlisted? Get it reviewed by our team of overseas admissions experts to make sure you make the cut.'
+    },
+    {
+      title: 'Interview Prep Session',
+      price: '₹2000',
+      description: 'Ace your upcoming interviews with guidance from India\'s top HR experts and increase your chances of landing your dream job.'
     }
   ]
 };
 
-// Global state
+// Global State
 let currentData = fallbackData;
-let currentAudience = '8-9 STUDENTS';
-let currentMainTab = 'plans';
+let activeAudience = '8-9 STUDENTS';
+let activeMainTab = 'plans';
 
-// Helper to resolve Sanity Image asset references to CDN URLs
+// Resolve Sanity Image
 function resolveSanityImageUrl(imageObj, fallbackUrl) {
   if (!imageObj) return fallbackUrl;
   if (typeof imageObj === 'string') return imageObj;
-  
-  // Direct asset object with url
-  if (imageObj.asset && imageObj.asset.url) {
-    return imageObj.asset.url;
-  }
-  
-  // Asset reference: image-{hash}-{width}x{height}-{ext}
+  if (imageObj.asset && imageObj.asset.url) return imageObj.asset.url;
   const ref = imageObj.asset?._ref || imageObj._ref;
   if (ref && ref.startsWith('image-')) {
     const parts = ref.split('-');
     if (parts.length >= 4) {
-      const id = parts[1];
-      const dimensions = parts[2];
-      const format = parts[3];
-      return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${id}-${dimensions}.${format}`;
+      return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${parts[1]}-${parts[2]}.${parts[3]}`;
     }
   }
-  
   return fallbackUrl;
 }
 
-// Render Mentoria Package Cards
-function renderPackages() {
-  const grid = document.getElementById('packagesGrid');
+// Render Mentoria Plans (Standard & Premium)
+function renderPlans() {
+  const grid = document.getElementById('planGrid');
   if (!grid) return;
 
-  const filtered = currentData.packages.filter(p => p.category === currentAudience);
-  
-  if (filtered.length === 0) {
-    grid.innerHTML = '<p style="text-align:center; grid-column:span 2; color:#64748B;">No packages found for this category.</p>';
-    return;
-  }
+  const p = (currentData.plans || fallbackData.plans).find(x => x.segment === activeAudience) || fallbackData.plans[0];
+  if (!p) return;
 
-  grid.innerHTML = filtered.map(pkg => {
-    const isPremium = pkg.tier === 'PREMIUM';
-    const bannerUrl = pkg.image ? resolveSanityImageUrl(pkg.image, pkg.imagePath || 'images/Mentoria1.png') : (pkg.imagePath || 'images/Mentoria1.png');
+  grid.innerHTML = `
+    <!-- Standard Card -->
+    <article class="plan-card">
+      <small>STANDARD</small>
+      <h3>${p.standardTitle}</h3>
+      <h4><span>₹</span>${p.standardPrice}</h4>
+      <ul>
+        ${(p.standardFeatures || []).map(f => `
+          <li class="feature yes">
+            <span>✓</span>
+            <p>${f}</p>
+          </li>
+        `).join('')}
+        ${(p.standardExcluded || []).map(f => `
+          <li class="feature no">
+            <span>✕</span>
+            <p>${f}</p>
+          </li>
+        `).join('')}
+      </ul>
+      <a href="#contact" style="text-decoration:none;"><button>BUY NOW</button></a>
+    </article>
 
-    return `
-      <article class="package-card ${isPremium ? 'premium' : ''}">
-        ${pkg.featured ? '<div class="featured-badge">★ Most Popular</div>' : ''}
-        <img src="${bannerUrl}" alt="${pkg.name}" class="package-banner-image">
-        <div class="package-body">
-          <span class="package-tier-label">${pkg.tier || (isPremium ? 'PREMIUM' : 'STANDARD')}</span>
-          <h3 class="package-name">${pkg.name}</h3>
-          <div class="package-price">${pkg.price}</div>
-          <div class="package-meta">${pkg.sessions ? pkg.sessions + ' • ' : ''}${pkg.duration || ''}</div>
-          <ul class="package-features">
-            ${(pkg.features || []).map(f => {
-              const text = typeof f === 'string' ? f : f.text;
-              const isInc = typeof f === 'string' ? true : (f.isIncluded !== false);
-              return `
-                <li class="package-feature ${isInc ? 'included' : 'excluded'}">
-                  <span class="feat-icon">${isInc ? '✓' : '✕'}</span>
-                  <span>${text}</span>
-                </li>
-              `;
-            }).join('')}
-          </ul>
-          <a href="#contact" class="package-cta ${isPremium ? 'primary' : 'outline'}">Enquire for ${pkg.name}</a>
-        </div>
-      </article>
-    `;
-  }).join('');
+    <!-- Premium Card -->
+    <article class="plan-card premium">
+      <div class="popular-banner">★ MOST POPULAR</div>
+      <small>PREMIUM</small>
+      <h3>${p.premiumTitle}</h3>
+      <h4><span>₹</span>${p.premiumPrice}</h4>
+      <ul>
+        ${(p.premiumFeatures || []).map(f => `
+          <li class="feature yes">
+            <span>✓</span>
+            <p>${f}</p>
+          </li>
+        `).join('')}
+      </ul>
+      <a href="#contact" style="text-decoration:none;"><button>BUY NOW</button></a>
+    </article>
+  `;
 }
 
-// Render Custom Modular Plans (Mentoria5 & Mentoria6)
+// Render Customised Modular Plans (12 Clean Cards)
 function renderCustomPlans() {
-  const grid = document.getElementById('customPlansGrid');
+  const grid = document.getElementById('customGrid');
   if (!grid) return;
 
-  const customModules = currentData.packages.filter(p => p.category === 'CUSTOMISABLE PLANS' || p.tier === 'CUSTOM');
-  
-  if (customModules.length === 0) {
-    grid.innerHTML = '<p style="text-align:center; grid-column:span 2; color:#64748B;">Custom plans currently being updated.</p>';
-    return;
-  }
-
-  grid.innerHTML = customModules.map(mod => {
-    const bannerUrl = mod.image ? resolveSanityImageUrl(mod.image, mod.imagePath || 'images/Mentoria5.png') : (mod.imagePath || 'images/Mentoria5.png');
-
-    return `
-      <div class="custom-module-card">
-        <img src="${bannerUrl}" alt="${mod.name}" class="custom-module-banner">
-        <div class="custom-module-content">
-          <h3 class="custom-module-title">${mod.name}</h3>
-          <p class="custom-module-desc">${mod.description || 'Modular specialized guidance designed to address your exact career goals.'}</p>
-          <ul class="custom-module-items">
-            ${(mod.features || []).map(item => {
-              const text = typeof item === 'string' ? item : item.text;
-              return `
-                <li class="custom-module-item">
-                  <span>✦</span>
-                  <div>${text}</div>
-                </li>
-              `;
-            }).join('')}
-          </ul>
-          <a href="#contact" class="btn-primary" style="width: 100%; margin-top: 1.5rem; text-align: center;">Customise This Module</a>
-        </div>
-      </div>
-    `;
-  }).join('');
+  const plans = currentData.customPlans || fallbackData.customPlans;
+  grid.innerHTML = plans.map(c => `
+    <div class="custom-card">
+      <h4>${c.title}</h4>
+      <div class="custom-price">${c.price}</div>
+      <p>${c.description || c.desc || ''}</p>
+      <a href="#contact" style="text-decoration:none;"><button>BUY NOW</button></a>
+    </div>
+  `).join('');
 }
 
-// Tab Switching Functions
+// Tab Switching
 function switchMainTab(tab) {
-  currentMainTab = tab;
-  const plansBtn = document.getElementById('plansTabBtn');
-  const customBtn = document.getElementById('customTabBtn');
-  const plansWrap = document.getElementById('plansSubTabsWrap');
-  const customWrap = document.getElementById('customPlansContainer');
+  activeMainTab = tab;
+  const plansBtn = document.getElementById('plansBtn');
+  const customBtn = document.getElementById('customBtn');
+  const plansWrap = document.getElementById('plansWrap');
+  const customSection = document.getElementById('custom-services');
 
   if (tab === 'plans') {
     plansBtn.classList.add('active');
     customBtn.classList.remove('active');
     plansWrap.style.display = 'block';
-    customWrap.classList.remove('active');
+    customSection.style.display = 'none';
+    renderPlans();
   } else {
     customBtn.classList.add('active');
     plansBtn.classList.remove('active');
     plansWrap.style.display = 'none';
-    customWrap.classList.add('active');
+    customSection.style.display = 'block';
     renderCustomPlans();
   }
 }
 
 function switchAudience(audience) {
-  currentAudience = audience;
-  const tabs = document.querySelectorAll('.audience-tab');
-  tabs.forEach(tab => {
-    if (tab.textContent.trim() === audience) {
-      tab.classList.add('active');
+  activeAudience = audience;
+  const tabs = document.querySelectorAll('.audience-tabs .tab');
+  tabs.forEach(t => {
+    if (t.textContent.trim() === audience) {
+      t.classList.add('active');
     } else {
-      tab.classList.remove('active');
+      t.classList.remove('active');
     }
   });
-  renderPackages();
+  renderPlans();
 }
 
-// Update DOM with full data
+// DOM updater
 function updateDOM(data) {
   currentData = data;
 
-  // 1. Settings & Branding
+  // Settings
   const s = data.settings || {};
   if (s.brandName) {
     document.title = s.seoTitle || `${s.brandName} - Find Your True North | Neha Rohra`;
@@ -497,13 +438,13 @@ function updateDOM(data) {
     document.getElementById('socialWhatsapp').href = `https://wa.me/91${s.whatsapp.replace(/[^0-9]/g, '')}`;
   }
 
-  // 2. Home Section
+  // Home Hero
   const h = data.home || {};
   if (h.heroHeading) document.getElementById('heroHeading').textContent = h.heroHeading;
   if (h.heroDescription) document.getElementById('heroDescription').textContent = h.heroDescription;
   if (h.ctaText) document.getElementById('heroCtaText').textContent = h.ctaText;
 
-  // 3. Founder Details
+  // Founder
   const f = data.founder || {};
   if (f.name) document.getElementById('founderName').textContent = f.name;
   if (f.title) document.getElementById('founderTitle').textContent = f.title;
@@ -515,50 +456,46 @@ function updateDOM(data) {
     document.getElementById('heroFounderAvatar').src = founderPhotoUrl;
   }
 
-  // 4. Render Packages & Services
-  renderPackages();
+  // Packages & Custom Plans
+  renderPlans();
   renderCustomPlans();
 }
 
-// Fetch live content directly from Sanity Studio API
+// Fetch Sanity Data Live
 async function fetchSanityContent() {
   const query = `{
     "settings": *[_type == "siteSettings"][0],
     "home": *[_type == "homePage"][0],
     "founder": *[_type == "founder"][0],
     "services": *[_type == "service"] | order(order asc),
-    "testimonials": *[_type == "testimonial"] | order(order asc),
-    "packages": *[_type == "mentoriaPackage"] | order(order asc)
+    "testimonials": *[_type == "testimonial"] | order(order asc)
   }`;
 
   const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`;
 
   try {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    if (!response.ok) throw new Error(`HTTP status ${response.status}`);
     const json = await response.json();
 
     if (json.result) {
-      console.log('Successfully fetched live data from Sanity:', json.result);
-      
-      const mergedData = {
+      const merged = {
+        ...fallbackData,
         settings: json.result.settings || fallbackData.settings,
         home: json.result.home || fallbackData.home,
         founder: json.result.founder || fallbackData.founder,
         services: (json.result.services && json.result.services.length > 0) ? json.result.services : fallbackData.services,
-        testimonials: (json.result.testimonials && json.result.testimonials.length > 0) ? json.result.testimonials : fallbackData.testimonials,
-        packages: (json.result.packages && json.result.packages.length > 0) ? json.result.packages : fallbackData.packages
+        testimonials: (json.result.testimonials && json.result.testimonials.length > 0) ? json.result.testimonials : fallbackData.testimonials
       };
-
-      updateDOM(mergedData);
+      updateDOM(merged);
     }
-  } catch (error) {
-    console.warn('Live Sanity fetch encountered an issue, running with robust fallback data:', error);
+  } catch (err) {
+    console.warn('Sanity live fetch fallback:', err);
     updateDOM(fallbackData);
   }
 }
 
-// Form Submission Handler
+// Form Submission
 function handleFormSubmit(e) {
   e.preventDefault();
   const submitBtn = document.getElementById('submitBtn');
@@ -570,23 +507,16 @@ function handleFormSubmit(e) {
   setTimeout(() => {
     submitBtn.style.display = 'none';
     successMsg.style.display = 'block';
-  }, 600);
+  }, 500);
 }
 
-// Mobile Menu Toggle
+// Mobile Menu
 function initMobileMenu() {
   const btn = document.getElementById('mobileMenuBtn');
   const links = document.getElementById('navLinks');
   if (btn && links) {
-    btn.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-
-    links.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-      });
-    });
+    btn.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => links.classList.remove('open')));
   }
 }
 
