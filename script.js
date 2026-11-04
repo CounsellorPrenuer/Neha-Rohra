@@ -78,16 +78,6 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
       role: 'Career Clarity Session',
       image: 'images/testimonial-client.jpg',
       quote: "My experience with the session was very meaningful. The entire process was so smooth and thoughtfully guided. The clarity and perspective I gained helped me explore my career options with much confidence and make more informed decisions about my future.\n\nThank you so much ma'am"
-    },
-    {
-      clientName: 'Aarav Sharma',
-      role: 'Class 11 Student (Science Stream)',
-      quote: 'Neha ma\'am helped me gain clarity when I was completely confused about choosing between Engineering and Design. The psychometric report and counselling gave me clear direction.'
-    },
-    {
-      clientName: 'Priya Mehta',
-      role: 'Parent of Class 10 Student',
-      quote: 'The session with Neha Rohra was an eye-opener. She explained career options with patience and understanding, making both me and my daughter confident in our stream selection.'
     }
   ],
   plans: [
