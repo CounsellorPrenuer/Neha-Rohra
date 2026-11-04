@@ -8,11 +8,11 @@ const fallbackData = {
   settings: {
     brandName: 'Career Compass',
     tagline: 'Find your true north',
-    email: 'serendipitysaranya@gmail.com',
+    email: 'neharohra1311@gmail.com',
     phone: '9051554125',
     whatsapp: '9051554125',
-    address: 'Mumbai, Maharashtra, India',
-    linkedin: 'http://www.linkedin.com/NehaRohra1311',
+    address: 'Bengaluru & Kolkata, India',
+    linkedin: 'https://www.linkedin.com/in/neharohra1311?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     instagram: 'https://instagram.com/careercompassservices',
     primaryCta: 'Explore Mentoria Packages',
     footerDescription: 'Empowering students and professionals to navigate educational pathways and discover their true north with dedicated guidance.',
@@ -27,7 +27,7 @@ const fallbackData = {
   },
   founder: {
     name: 'Neha Rohra',
-    title: 'SENIOR TALENT ACQUISITION & TALENT MANAGEMENT || COMPREHENSIVE HRBP ROLE || HR POLICIES AND AUDIT || HR LECTURER || CAREER COUNSELOR-PRENEUR',
+    title: 'CAREER COUNSELOR-PRENEUR / SENIOR TALENT ACQUISITION & TALENT MANAGEMENT / COMPREHENSIVE HRBP ROLE / HR POLICIES AND AUDIT / HR LECTURER',
     biography: `Neha Rohra brings 15 years of overall experience, with 12+ years in Human Resources, and a key focus on talent acquisition—particularly for premium roles. Her exposure to recruitment across industries and domains has given her a deep understanding of the skills, education pathways, and competencies required for different career goals. With experience supporting hiring decisions at both talent and organizational levels, she bridges what candidates bring with what roles truly need.
 
 Building on her HRBP work, Neha Rohra has also handled grievance management, supporting fair, empathetic resolution processes aligned with workplace well-being and business needs. Alongside her HR responsibilities, she has served an NGO, providing counselling to individuals in distress through a healing, growth-focused approach. She has also worked as a visiting lecturer across colleges for HR and contributed to IELTS English coaching. With a blend of hiring, counselling, and teaching—plus experience with top MNCs such as EY (EY Parthenon) and Capgemini—career advisory becomes her next logical step, while she gradually moves toward entrepreneurship with purpose and meaningful impact.`,
@@ -74,6 +74,11 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
   ],
   testimonials: [
     {
+      clientName: 'Student & Mentee',
+      role: 'Career Clarity Session',
+      quote: "My experience with the session was very meaningful. The entire process was so smooth and thoughtfully guided. The clarity and perspective I gained helped me explore my career options with much confidence and make more informed decisions about my future.\n\nThank you so much ma'am"
+    },
+    {
       clientName: 'Aarav Sharma',
       role: 'Class 11 Student (Science Stream)',
       quote: 'Neha ma\'am helped me gain clarity when I was completely confused about choosing between Engineering and Design. The psychometric report and counselling gave me clear direction.'
@@ -82,11 +87,6 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
       clientName: 'Priya Mehta',
       role: 'Parent of Class 10 Student',
       quote: 'The session with Neha Rohra was an eye-opener. She explained career options with patience and understanding, making both me and my daughter confident in our stream selection.'
-    },
-    {
-      clientName: 'Rohan Deshmukh',
-      role: 'Working Professional (HR Analyst)',
-      quote: 'Neha\'s corporate HR background from EY and Capgemini brings incredible practical value. Her interview prep and career roadmap guidance helped me transition into a senior role smoothly.'
     }
   ],
   plans: [
@@ -429,6 +429,11 @@ function updateDOM(data) {
   if (s.linkedin) {
     document.getElementById('socialLinkedin').href = s.linkedin;
     document.getElementById('footerLinkedin').href = s.linkedin;
+    const contactLinkedinLink = document.getElementById('contactLinkedinLink');
+    if (contactLinkedinLink) {
+      contactLinkedinLink.href = s.linkedin;
+      contactLinkedinLink.textContent = s.linkedin.replace(/^https?:\/\/(www\.)?/, '').split('?')[0];
+    }
   }
   if (s.instagram) {
     document.getElementById('socialInstagram').href = s.instagram;
@@ -451,14 +456,50 @@ function updateDOM(data) {
   if (f.biography) document.getElementById('founderBio').textContent = f.biography;
   if (f.philosophy) document.getElementById('founderPhilosophy').textContent = `"${f.philosophy}"`;
   if (f.photo) {
-    const founderPhotoUrl = resolveSanityImageUrl(f.photo, 'images/founder.jpeg');
+    const founderPhotoUrl = resolveSanityImageUrl(f.photo, 'images/founder-new.jpg');
     document.getElementById('founderPhoto').src = founderPhotoUrl;
     document.getElementById('heroFounderAvatar').src = founderPhotoUrl;
   }
 
+  // Testimonials
+  renderTestimonials(data.testimonials || fallbackData.testimonials);
+
   // Packages & Custom Plans
   renderPlans();
   renderCustomPlans();
+}
+
+// Render Testimonials Dynamically
+function renderTestimonials(testimonials) {
+  const container = document.getElementById('testimonialsGrid');
+  if (!container || !testimonials || testimonials.length === 0) return;
+
+  container.innerHTML = testimonials.map(t => {
+    const initials = (t.clientName || 'Student')
+      .split(' ')
+      .map(w => w[0])
+      .slice(0, 2)
+      .join('')
+      .toUpperCase();
+
+    const formattedQuote = (t.quote || '')
+      .replace(/\n\n/g, '<br><br>')
+      .replace(/\n/g, '<br>');
+
+    return `
+      <div class="testimonial-card">
+        <div class="quote-icon">“</div>
+        <p class="testimonial-quote">${formattedQuote}</p>
+        <div class="testimonial-client">
+          <div class="client-avatar">${initials}</div>
+          <div>
+            <h4 class="client-name">${t.clientName || 'Mentee'}</h4>
+            <p class="client-role">${t.role || 'Career Guidance Mentee'}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 // Fetch Sanity Data Live
@@ -467,7 +508,8 @@ async function fetchSanityContent() {
     "settings": *[_type == "siteSettings"][0],
     "home": *[_type == "homePage"][0],
     "founder": *[_type == "founder"][0],
-    "services": *[_type == "service"] | order(order asc)
+    "services": *[_type == "service"] | order(order asc),
+    "testimonials": *[_type == "testimonial"] | order(order asc)
   }`;
 
   const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`;
@@ -483,7 +525,8 @@ async function fetchSanityContent() {
         settings: json.result.settings || fallbackData.settings,
         home: json.result.home || fallbackData.home,
         founder: json.result.founder || fallbackData.founder,
-        services: (json.result.services && json.result.services.length > 0) ? json.result.services : fallbackData.services
+        services: (json.result.services && json.result.services.length > 0) ? json.result.services : fallbackData.services,
+        testimonials: (json.result.testimonials && json.result.testimonials.length > 0) ? json.result.testimonials : fallbackData.testimonials
       };
       updateDOM(merged);
     }
@@ -518,10 +561,78 @@ function initMobileMenu() {
   }
 }
 
+// Visitor Lead Capture Popup Modal
+function initLeadModal() {
+  const modal = document.getElementById('leadModalBackdrop');
+  const closeBtn = document.getElementById('leadModalCloseBtn');
+  if (!modal) return;
+
+  // Check if visitor has already submitted or dismissed the popup in this session
+  const hasSeenModal = sessionStorage.getItem('cc_lead_modal_seen');
+  if (!hasSeenModal) {
+    // Show after a brief gentle delay (1.5 seconds) so user gets the page context
+    setTimeout(() => {
+      modal.style.display = 'flex';
+    }, 1500);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      sessionStorage.setItem('cc_lead_modal_seen', 'true');
+    });
+  }
+
+  // Close when clicking outside the card
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      sessionStorage.setItem('cc_lead_modal_seen', 'true');
+    }
+  });
+}
+
+function handleLeadSubmit(e) {
+  e.preventDefault();
+  const nameInput = document.getElementById('leadName');
+  const phoneInput = document.getElementById('leadPhone');
+  const audienceInput = document.getElementById('leadAudience');
+  const submitBtn = document.getElementById('leadSubmitBtn');
+  const successNotice = document.getElementById('leadSuccessNotice');
+
+  const lead = {
+    name: nameInput ? nameInput.value.trim() : '',
+    phone: phoneInput ? phoneInput.value.trim() : '',
+    audience: audienceInput ? audienceInput.value : '',
+    timestamp: new Date().toISOString()
+  };
+
+  // Save to localStorage for lead tracking/follow-up
+  try {
+    const existingLeads = JSON.parse(localStorage.getItem('career_compass_leads') || '[]');
+    existingLeads.push(lead);
+    localStorage.setItem('career_compass_leads', JSON.stringify(existingLeads));
+  } catch (err) {
+    console.warn('Could not save lead to localStorage', err);
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Opening Website...';
+  if (successNotice) successNotice.style.display = 'block';
+
+  sessionStorage.setItem('cc_lead_modal_seen', 'true');
+
+  setTimeout(() => {
+    const modal = document.getElementById('leadModalBackdrop');
+    if (modal) modal.style.display = 'none';
+  }, 1200);
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
   initMobileMenu();
+  initLeadModal();
   updateDOM(fallbackData);
   fetchSanityContent();
 });
