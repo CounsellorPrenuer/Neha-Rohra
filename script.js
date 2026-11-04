@@ -76,6 +76,7 @@ Building on her HRBP work, Neha Rohra has also handled grievance management, sup
     {
       clientName: 'Student & Mentee',
       role: 'Career Clarity Session',
+      image: 'images/testimonial-client.jpg',
       quote: "My experience with the session was very meaningful. The entire process was so smooth and thoughtfully guided. The clarity and perspective I gained helped me explore my career options with much confidence and make more informed decisions about my future.\n\nThank you so much ma'am"
     },
     {
@@ -456,7 +457,7 @@ function updateDOM(data) {
   if (f.biography) document.getElementById('founderBio').textContent = f.biography;
   if (f.philosophy) document.getElementById('founderPhilosophy').textContent = `"${f.philosophy}"`;
   if (f.photo) {
-    const founderPhotoUrl = resolveSanityImageUrl(f.photo, 'images/founder-new.jpg');
+    const founderPhotoUrl = resolveSanityImageUrl(f.photo, 'images/founder.jpeg');
     document.getElementById('founderPhoto').src = founderPhotoUrl;
     document.getElementById('heroFounderAvatar').src = founderPhotoUrl;
   }
@@ -486,12 +487,18 @@ function renderTestimonials(testimonials) {
       .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>');
 
+    let avatarMarkup = `<div class="client-avatar">${initials}</div>`;
+    if (t.image) {
+      const avatarUrl = resolveSanityImageUrl(t.image, typeof t.image === 'string' ? t.image : 'images/testimonial-client.jpg');
+      avatarMarkup = `<img src="${avatarUrl}" alt="${t.clientName || 'Client'}" class="client-avatar" style="object-fit: cover;">`;
+    }
+
     return `
       <div class="testimonial-card">
         <div class="quote-icon">“</div>
         <p class="testimonial-quote">${formattedQuote}</p>
         <div class="testimonial-client">
-          <div class="client-avatar">${initials}</div>
+          ${avatarMarkup}
           <div>
             <h4 class="client-name">${t.clientName || 'Mentee'}</h4>
             <p class="client-role">${t.role || 'Career Guidance Mentee'}</p>
